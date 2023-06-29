@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 외부 파일 링크 -->
+    <!-- img 태그, 이미지 삽입 -->
+    <!-- src 속성에 이미지 경로 또는 데이터를 삽입 -->
+    <!-- 
+   alt 속성은 접근성(accessability) 속성으로
+   이미지가 표시 불가능할 때 출력되는 문자열
+   1. 이미지 파일 제공 서버 접근 불가
+   2. 시각장애인 리더기에서 이미지 대신에 읽음
+   3. 브라우저에서 이미지 다운로드 설정을 껐을 때  -->
+    <!-- alt는 현재 필수 속성 사용을 해야 한다. -->
+    <img
+      src="https://ssl.pstatic.net/melona/libs/1453/1453309/2ccff7bba9d3f14c7ec3_20230627192447582.jpg"
+      alt="더 시에나 그랜드 오픈"
+      width="500"
+    />
+    <!-- 비율을 맞출 수 없으면 width나 height 둘 중에 하나만 줘야 함.-->
+
+    <!-- 내부 파일 링크 -->
+    <img src="./img/penguins.jpg" alt="펭귄 3마리" />
+    <img src="../img/koala.jpg" alt="코알라 1마리" />
+    <!-- <img src="/img/koala.jpg" alt="코알라 1마리" /> -->
+
+    <!-- base64 문자열 구조의 데이터를 삽입 -->
+    <!-- 문서 내부에 이미지를 넣는 방법 -->
+    <!-- base64 포맷, 이미지 용량이 33%증가됨. -->
+    <img src="" alt="" />
+  </body>
+</html>
