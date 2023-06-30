@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        /* #R(||)G(||)B(||) */
+        /* 빛의 3원색: 다 섞으면 흰색 */
+        /* 0 ~ 255(십진수): 00 ~ ff(16진수) */
+        /* 16진수 표기법 (color hex 치면 나옴 ㅎㅎ) */
+        /*  rgb to hex */
+        background-color: #f9a9e0;
+        /* #fff(화이트), #000(블랙) */
+        color: #ffffff;
+      }
+      p {
+        /* 10진수 표기법 */
+        background-color: rgb(140, 10, 150);
+      }
+      div {
+        /* rgba(r, g, b, a) */
+        /* a(alpha): 투명도 값음 0(투명) ~ 1(불투명) 사이의 실수 */
+        /* a값이 0이면 완전 투명해져서 배경색이 비치는 상태가 됨. */
+        /* 배경색이 있다면 배경색이 투명도에 따라서 섞인다. */
+        /* color: 전경색(foreground), 글자색 */
+        /* background-color: 배경색, 요소의 범위까지 색이 칠해짐 */
+        color: rgb(200, 10, 150, 0.7);
+        /* 16진수 표기법으로 투명도 표기 가능함 */
+        /* rrggbbaa */
+        /* 예) #f9a9e0c0 */
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum.</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      commodi expedita quas, a numquam aperiam. Omnis et nam facere perferendis
+      delectus eum dolores recusandae nisi! Totam, hic. Laborum, corrupti nam.
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa
+      possimus ut officia iste amet, alias deleniti hic nulla. Velit consectetur
+      perferendis odio repellat dolor distinctio quia, eum voluptatem cum!
+    </div>
+  </body>
+</html>

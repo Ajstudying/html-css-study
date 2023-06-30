@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 바로 밑에 있는 h1만 선택하고 싶을 때 */
+      /* 자식(children) 선택자 */
+      /* 부모선택자 > 자식선택자 > ... > ..  */
+      header > h1 {
+        color: red;
+      }
+      /* nav밑에 있는 h1이 header와 footer 두개중 header에 있는 걸 선택하고 싶을 때 */
+      header > nav > h1 {
+        color: green;
+      }
+      section > h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Lorem, ipsum.</h1>
+      <nav>
+        <h1>Navigation</h1>
+      </nav>
+    </header>
+    <section>
+      <h1>Lorem, ipsum.</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis velit
+        architecto tempora nesciunt officiis! Commodi, unde vitae? Ad quibusdam
+        voluptatibus quos pariatur, veritatis, iusto libero magnam vitae soluta
+        voluptatem tenetur.
+      </p>
+    </section>
+    <footer>
+      <nav>
+        <h1>Site Map</h1>
+      </nav>
+    </footer>
+  </body>
+</html>
