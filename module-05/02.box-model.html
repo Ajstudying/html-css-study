@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* html/css의 기본 크기는 */
+      /* content-box로 계산이 됨 */
+      * {
+        /* 모든 요소의 박스사이즈 초기화, 전체 요소에 대해서 border-box 이게 안되어있으면 계산하기 힘듬.*/
+        /* box-sizing: border-box */
+        /* 엘리먼트 크기 계산을 보더 영역까지 */
+        box-sizing: border-box;
+      }
+      body {
+        /* css 초기화로 body에 아래와 같이 초기화 해줘야 함. */
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        /* box-sizing도 이렇게 같이 초기화 해주면 좋다. */
+        box-sizing: border-box;
+      }
+
+      div {
+        /* 컨텐트 영역, border(선, 경계) 안 쪽이 width와 height로 정해진다. */
+        /* 눈으로 보이는 기준을 300,200으로 하고 싶으면 boder와 padding값(위아래 양옆)을 뺀 나머지를 width와 height에 적어줘야함. */
+        width: 300px;
+        height: 200px;
+        /* border(선)와 컨텐트 사이영역이 padding/ border를 지워도 padding영역은 있다.*/
+        padding: 10px;
+        border: 4px solid black;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa
+      rerum odit ducimus corporis aliquid doloremque libero perspiciatis ex
+      eaque at error soluta cum, possimus officiis placeat porro vitae nostrum.
+    </div>
+  </body>
+</html>
