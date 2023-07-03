@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 첫번째 글자 선택 */
+      /* 의사 요소 */
+      p::first-letter {
+        font-size: 3rem;
+      }
+      /* 첫번째 줄 */
+      p::first-line {
+        color: green;
+      }
+      ul {
+        list-style: none;
+      }
+      li::before {
+        content: "❤✔"; /* ""이걸 꼭 해줘야 함. */
+        margin-right: 0.5rem;
+        color: green;
+      }
+      li::after {
+        content: "❤";
+        color: rebeccapurple;
+        margin-left: 0.5rem;
+      }
+      /* 요소를 선택해서 드래그 했을 때 */
+      /* 텍스트 선택되면 적용되는 스타일 */
+      /* ::selection  */
+      p::selection {
+        background-color: gold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur
+      ipsam, sint repudiandae possimus, ducimus nihil quo quis aliquam assumenda
+      recusandae debitis eligendi non enim deleniti magni sed, libero
+      asperiores.
+    </p>
+    <h1>할 일</h1>
+    <ul>
+      <li>HTML 태그 정리하기</li>
+      <li>CSS연습하기</li>
+    </ul>
+  </body>
+</html>

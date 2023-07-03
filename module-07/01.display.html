@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* 화면에서 숨김, 공간도 나타날 때만 차지함. */
+        /* display: none; */
+        /* display: none; */
+
+        /* 화면에서 숨기지만 공간은 차지 */
+        visibility: hidden;
+      }
+
+      h1:hover + div {
+        /* div는 기본이 block */
+        /* block: 위에부터 아래로 */
+        /* 너비가 부모의 100%, 높이는 컨텐트 높이 */
+        /*  */
+        /* display: block; display: none 위의 것과 짝궁 */
+
+        /* 보여줌, display 속성 변경하지 않음. */
+        visibility: visible;
+      }
+
+      /* li는 기본 block 형식인데 아래와 같은 방식을 사용하면 inline으로 바꿀 수 있음 */
+      li {
+        display: inline;
+      }
+      /* 원래 span은 컨텐트 만큼의 크기인데, 너비값을 주고 싶으면 */
+      /* display: inline-block을 주면 된다. */
+      /* span은 기본적으로 inline */
+      /* 크기 제어하려면 inline-block */
+      span {
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        /* 좌우 정렬 */
+        /* text-align */
+        text-align: center;
+        border: 1px solid black;
+      }
+      span:first-of-type {
+        text-decoration: line-through;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: blue;
+        text-decoration-thickness: 10px;
+      }
+      span:nth-of-type(2) {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto
+      maiores vero dolorum voluptatem doloribus officia, vel minus corporis,
+      sapiente aperiam! Quibusdam voluptate tenetur sequi culpa. Veritatis
+      repellat quo voluptate?
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto
+      maiores vero dolorum voluptatem doloribus officia, vel minus corporis,
+      sapiente aperiam! Quibusdam voluptate tenetur sequi culpa. Veritatis
+      repellat quo voluptate?
+    </div>
+    <ul>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+    </ul>
+    <span>Lorem, ipsum.</span>
+    <span>Lorem, ipsum.</span>
+  </body>
+</html>
