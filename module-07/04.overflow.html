@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 200px;
+        height: 100px;
+        border: 3px solid black;
+      }
+      p:nth-of-type(1) {
+        /* 컨텐트가 요소 크기 밖으로 나가는 경우 */
+        /* overflow: hidden 숨김 */
+        overflow: hidden;
+      }
+
+      p:nth-of-type(2) {
+        overflow: scroll;
+      }
+      /* 스크롤바 x도 있긴 한데 잘 안씀! */
+      p:nth-of-type(3) {
+        /* 양이 없어도 스크롤바가 무조건 생김 */
+        overflow-y: scroll;
+      }
+      p:nth-of-type(4) {
+        /* 양이 없으면 스크롤바가 자동으로 없어짐. */
+        /* 양이 늘어나게 되면 스크롤바가 나중에 생기기 때문에 그걸 감안(계산)하고 해야 함. */
+        overflow-y: auto;
+      }
+      p:nth-of-type(5) {
+        overflow: hidden;
+        /* 내리는 기준, 기본: 빈 공간을 기준으로 내림. 단어가 뒤 쪽으로 잘릴 거 같으면 아래 빈공간으로 내림 */
+        /* 텍스트 컨텐트를 아래로 안 내림 */
+        white-space: nowrap;
+        /* overflow-x: auto; */
+        /* 넘어가는 영역을 ... */
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+      doloribus fugit iste tempora! Exercitationem totam odio accusamus!
+      Quibusdam maiores rem recusandae ducimus deserunt non iusto obcaecati
+      temporibus vitae, quaerat doloribus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+      doloribus fugit iste tempora! Exercitationem totam odio accusamus!
+      Quibusdam maiores rem recusandae ducimus deserunt non iusto obcaecati
+      temporibus vitae, quaerat doloribus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+      doloribus fugit iste tempora! Exercitationem totam odio accusamus!
+      Quibusdam maiores rem recusandae ducimus deserunt non iusto obcaecati
+      temporibus vitae, quaerat doloribus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+      doloribus fugit iste tempora! Exercitationem totam odio accusamus!
+      Quibusdam maiores rem recusandae ducimus deserunt non iusto obcaecati
+      temporibus vitae, quaerat doloribus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+      doloribus fugit iste tempora! Exercitationem totam odio accusamus!
+      Quibusdam maiores rem recusandae ducimus deserunt non iusto obcaecati
+      temporibus vitae, quaerat doloribus?
+    </p>
+  </body>
+</html>
