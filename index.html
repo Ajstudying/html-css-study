@@ -14,7 +14,8 @@
     />
     <style>
       body {
-        width: 1000px;
+        /* width: 1000px; */
+        width: 55%;
         margin: 0 auto;
         padding: 0;
         border: 0;
@@ -22,10 +23,16 @@
         font: inherit;
         vertical-align: baseline;
         box-sizing: border-box;
-        /* overflow-x: hidden; */
-        background: url(./img/pngtree-sand-texture-light-brown-background-image_845151.jpg);
-        background-size: 1000px 450px;
+        background: url(./img/olesia-hnatkevych-kMHGWawr-Yc-unsplash.jpg);
+        /* background-repeat: no-repeat; */
         /* background-size: cover; */
+        background-size: 700px 1000px;
+        position: relative;
+      }
+      @media (max-width: 900px) {
+        body {
+          width: 500px;
+        }
       }
 
       * {
@@ -42,33 +49,20 @@
       }
       header {
         text-align: center;
-        height: 100px;
+        height: 90px;
       }
       header h1 {
-        display: inline-block;
-        padding: 0.2rem 7rem;
+        /* display: inline-block; */
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 0.2rem 5rem;
         border-radius: 0px 15px 0px 15px;
         background-color: #d2a87d;
         color: var(--footer-color);
-        margin: 20px;
         font-family: "Noto Serif KR", serif;
         font-weight: 900;
-      }
-      #목차 {
-        font-size: 18px;
-      }
-      nav {
-        position: sticky;
-        top: 0px;
-      }
-      nav > div > ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-      }
-      nav > div > ul > li {
-        display: inline;
+        font-size: 35px;
       }
       nav > div > ul > li::after {
         list-style: none;
@@ -76,22 +70,94 @@
         margin-left: 0.2rem;
         color: red;
       }
-      nav > div > ul > li > a {
-        color: #ede0d4;
+
+      nav > div > ul > li > a:hover {
+        background-color: var(--footer-color);
       }
       .box {
-        width: 950px;
-        margin: 0 auto;
         height: 40px;
-        left: 74px;
-        padding-top: 0.5rem;
-        padding-left: 19rem;
         border-radius: 10px;
         background-color: #a98360;
+        box-shadow: 5px 5px 10px hsl(19, 28%, 33%);
+        margin: 10px;
+        position: absolute;
+        left: -11.8rem;
+        margin: 0;
+        height: 120px;
+        padding-right: 12px;
+
+        /* display: flex; */
+      }
+      @media (min-width: 1100px) {
+        .box {
+          flex-direction: row;
+          justify-content: space-evenly;
+          position: static;
+          height: 40px;
+          margin: 10px;
+        }
+      }
+      .total-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 18px;
+        padding-top: 0.2rem;
+        /* line-height: 28px; */
+      }
+      @media (min-width: 1100px) {
+        .total-content {
+          list-style: none;
+          margin-top: 0.2rem;
+          font-size: 20px;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
+      nav > div > ul > li > a {
+        color: #ede0d4;
+        flex-wrap: wrap;
+      }
+      nav {
+        position: sticky;
+        top: 0px;
+      }
+      h2 {
+        background-color: var(--secondary-background-color);
+        border-radius: 10px;
+        margin: 0;
+        padding-left: 1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.5rem;
+        box-shadow: 5px 5px 5px #d2a87d;
+      }
+      h2 > a {
+        color: #6d4c3d;
+        font-family: "Noto Serif KR", serif;
+        font-size: 25px;
+      }
+      h2 > a:hover {
+        color: var(--hover-color);
+      }
+      h2 > div {
+        display: none;
+      }
+      h2 > a:hover + div {
+        display: block;
+      }
+      section {
+        margin: auto;
+        padding: 25px;
+        background-color: var(--main-background-color);
+        padding-bottom: 0.2rem;
+      }
+      section > img {
+        width: 100%;
       }
       table {
         border-collapse: collapse;
-        width: 950px;
+        /* width: 950px; */
+        width: 100%;
       }
       table tr:nth-child(2n) {
         background-color: #fed8b1;
@@ -99,7 +165,6 @@
       table tr:nth-child(2n-1) {
         background-color: var(--secondary-background-color);
       }
-
       tr,
       th,
       td {
@@ -111,48 +176,23 @@
         font-size: 17px;
         background-color: #ddb892;
       }
-      h2 {
-        background-color: var(--secondary-background-color);
-        border-radius: 10px;
-        margin: 0;
-        padding-left: 1rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.5rem;
-      }
-      h2 > a {
-        color: #6d4c3d;
-        font-family: "Noto Serif KR", serif;
-      }
-      h2 > a:hover {
+      h3 > a:hover {
         color: var(--hover-color);
       }
-      h2 > div {
-        display: none;
-      }
-      h2 > a:hover + div {
-        display: block;
-      }
-
-      section {
-        margin: auto;
-        padding: 25px;
-        background-color: var(--main-background-color);
-        padding-bottom: 0.2rem;
-      }
-      section > h3 > a:hover {
-        color: var(--hover-color);
-      }
-      section > h3 > a:visited {
+      h3 > a:visited {
         color: var(--footer-color);
+      }
+      h3 > a {
+        font-family: "Noto Serif KR", serif;
+        font-size: 20px;
+        padding: 3px;
+        display: inline;
+        background-color: rgb(254, 216, 177, 0.4);
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #d2a87d;
       }
       img {
         padding: 30px 30px 10px 30px;
-      }
-      h1 > a:hover {
-        color: var(--hover-color);
-      }
-      h1 > a:visited {
-        color: var(--footer-color);
       }
       ol {
         list-style: none;
@@ -173,13 +213,17 @@
         position: sticky;
         top: 0px;
       }
-      aside > div {
-        left: 62rem;
+      .ad1 {
+        right: -21rem;
         position: absolute;
+      }
+      aside > div > a {
+        display: block;
       }
       aside > div > a > img {
         width: 350px;
         padding-top: 0;
+        padding-bottom: 0;
       }
       footer {
         text-align: right;
@@ -212,11 +256,11 @@
   </head>
   <body>
     <header>
-      <h1 id="레시피" title="레시피 목록입니다.">내가 좋아하는 요리 레시피</h1>
+      <h1 id="recipe" title="레시피 목록입니다.">내가 좋아하는 요리 레시피</h1>
     </header>
     <nav>
       <div class="box">
-        <ul id="목차">
+        <ul class="total-content">
           <li><a href="#김치볶음밥">김치볶음밥</a></li>
           <li><a href="#뚝배기불고기">뚝배기불고기</a></li>
           <li><a href="#감자조림">감자조림</a></li>
@@ -224,9 +268,17 @@
       </div>
     </nav>
     <aside class="wrapper">
-      <div>
+      <div class="ad1">
         <a href="https://www.10000recipe.com/event/422" target="_blank"
-          ><img id="광고" src="./img/토마토.jpg" alt="토마토"
+          ><img src="./img/토마토.jpg" alt="토마토"
+        /></a>
+        <a href="https://www.10000recipe.com/recipe/6987988" target="_blank"
+          ><img src="./img/야식.jpg" alt="야식"
+        /></a>
+        <a
+          href="https://shop.10000recipe.com/goods/goods_view.php?goodsNo=1000037581&utm_source=10k_web&utm_medium=main_home_event_banner&utm_campaign=g1000037581"
+          target="_blank"
+          ><img src="./img/편백.jpg" alt="편백찜기"
         /></a>
       </div>
     </aside>
@@ -286,13 +338,13 @@
             </tr>
           </tbody>
         </table>
-        <h1>
+        <h3>
           <a
             href="https://www.10000recipe.com/recipe/6899765#stepdescr1"
             target="_blank"
             >조리순서:</a
           >
-        </h1>
+        </h3>
         <ol>
           <li>
             백종원 김치볶음밥위에 올라갈 계란은 마지막에 밥위에 얹어서 먹을걸로
@@ -411,13 +463,13 @@
             </tr>
           </tbody>
         </table>
-        <h1>
+        <h3>
           <a
             href="https://www.10000recipe.com/recipe/4653357#stepdescr1"
             target="_blank"
             >조리순서:</a
           >
-        </h1>
+        </h3>
         <ol>
           <li>마른당면은 물에 불려 부드럽게 만들어주구여..</li>
           <li>불고깃감은 종이타올위에 20분정도 올려 핏물을 제거해줍니다</li>
@@ -509,13 +561,13 @@
             </tr>
           </tbody>
         </table>
-        <h1>
+        <h3>
           <a
             href="https://www.10000recipe.com/recipe/6829975#stepDiv1"
             target="_blank"
             >조리순서:</a
           >
-        </h1>
+        </h3>
         <ol>
           <li>감자를 먹기 좋은 크기로 썰어 올리브유 두른팬에 잘볶아주세요.</li>
           <li>감자가 어느정도 익으면 당근도 넣고 볶아주세요.</li>
@@ -540,7 +592,7 @@
       </footer>
       <div>
         <h3>
-          <sup><a href="#레시피">상위로</a></sup>
+          <sup><a href="#recipe">상위로</a></sup>
         </h3>
       </div>
     </article>
