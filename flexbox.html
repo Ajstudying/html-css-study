@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav,
+      main,
+      aside,
+      article,
+      section {
+        border: 1px solid black;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+      }
+      /* nav,
+      main {
+        flex: 1;
+      } */
+      main {
+        display: flex;
+      }
+      aside {
+        flex: 1;
+      }
+
+      article {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+      }
+
+      section:nth-of-type(1) {
+        flex: 2;
+      }
+
+      section:nth-of-type(2) {
+        flex: 1;
+      }
+      div {
+        display: flex;
+        flex: 4;
+      }
+      article {
+        flex-direction: column;
+      }
+      aside:nth-of-type(1) {
+        flex-grow: 3;
+      }
+      /* aside:nth-of-type(2) {
+        flex: 1;
+      } */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>navigation</h1>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <main>
+      <aside><p>1</p></aside>
+      <article>
+        <section><p>2</p></section>
+        <section><p>3</p></section>
+      </article>
+      <aside><p>4</p></aside>
+    </main>
+    <div>
+      <section>
+        <p>1</p>
+      </section>
+      <article>
+        <aside><p>2</p></aside>
+        <aside><p>3</p></aside>
+      </article>
+    </div>
+  </body>
+</html>

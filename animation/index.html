@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* @keyframes 애니메이션이름 {재생순서} */
+      @keyframes ani {
+        0% {
+          /* 0% 디폴트 값... */
+          transform: translate(0, 0) rotate(00eg);
+          background-color: red;
+        }
+        25% {
+          transform: translate(100px, 0) rotate(90deg);
+          background-color: orange;
+        }
+        50% {
+          transform: translate(100px, 100px) rotate(180deg);
+          background-color: yellow;
+        }
+        75% {
+          transform: translate(0, 100px) rotate(270deg);
+          background-color: green;
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+          background-color: blue;
+        }
+      }
+
+      @keyframes ani2 {
+        from {
+          transform: translate(0, 0);
+        }
+        /* 원래 상태에서 to까지 이동만 하는 거면 to만 써도 상관없다. */
+        to {
+          transform: translate(100px, 100px);
+        }
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        /* animation: 키프레임이름 재생시간 타이밍 함수 */
+        /* forwards: 재생 끝난 시점을 유지, 원래상태 복귀X */
+        /* infinite: 무한 반복 재생 */
+        /* steps(숫자값) */
+        /* 불연속적으로 중간값을 잘라서 재생 */
+
+        /* 아래거는 원래 상태 복귀 */
+        /* animation: ani2 4s linear; */
+        /* animation: ani2 4s linear forwards; */
+        /* animation: ani 4s linear infinite; */
+        animation: ani2 2s linear infinite alternate;
+        /* 갔다가 다시 되돌아감. alternate가 없이 infinite 하면 처음으로 순간이동 후 무한 반복 */
+
+        animation-play-state: paused;
+      }
+      div:hover {
+        /* 재생상태일 때 hover시에 멈추는 기능 */
+        /* animation-play-state: paused; */
+        animation-play-state: running;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- css animation -->
+    <!-- 지정해 놓은 규칙에 따라서 재생되 효과 -->
+    <!-- 규칙은 keyframe, 재생순서(sequence) 단위로 지정 -->
+    <!-- 예) 0% 25% 50% 75% 100%, from/to -->
+    <!-- 트랜지션과 동일하게 각 구간 중간 과정을 적용해줌 -->
+    <div></div>
+  </body>
+</html>
