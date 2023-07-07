@@ -7,38 +7,57 @@
     <style>
       article,
       section,
-      div {
+      div,
+      nav {
         border: 1px solid black;
-        height: 100px;
       }
       body {
         display: flex;
+        /* flex-direction: column; */
         height: 50rem;
       }
       section {
         display: flex;
         flex-direction: column;
+        width: 5rem;
+        height: 5rem;
       }
       article {
         display: flex;
+        width: 30px;
+      }
+      article div {
+        width: 3rem;
+      }
+      article div:nth-of-type(1) {
+        flex: 2;
+      }
+      article div:nth-of-type(2) {
         flex: 1;
       }
       nav {
-        flex: 1;
+        flex: 3;
       }
       aside {
         display: flex;
         flex: 3;
       }
+
       aside div:nth-of-type(1) {
-        flex-grow: 2;
+        flex: 1;
       }
-      aside div:nth-of-type(1) {
-        flex-grow: 1;
+      aside div:nth-of-type(2) {
+        flex: 2;
       }
       .dd {
         display: flex;
         flex-direction: column;
+      }
+      .dd > div:nth-of-type(1) {
+        flex-grow: 2;
+      }
+      .dd > div:nth-of-type(2) {
+        flex-grow: 1;
       }
     </style>
   </head>
@@ -46,7 +65,7 @@
     <section>
       <article>
         <div>1</div>
-        <div>2</div>
+        <!-- <div>2</div> -->
       </article>
       <nav>3</nav>
       <aside>

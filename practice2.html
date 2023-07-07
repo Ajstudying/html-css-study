@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      header,
+      nav,
+      section,
+      aside,
+      footer {
+        background-color: antiquewhite;
+        border: 1px solid black;
+      }
+
+      @media (min-width: 768px) {
+        .dd {
+          display: flex;
+          flex-direction: row;
+        }
+        nav {
+          width: fit-content;
+        }
+        div > aside {
+          width: 500px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Lorem, ipsum.</h1>
+    </header>
+    <nav>
+      <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ol>
+    </nav>
+    <div class="dd">
+      <section>
+        <article>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident,
+          nemo nostrum mollitia accusantium ab illo neque, necessitatibus vitae
+          officiis impedit eum suscipit tempora corrupti culpa veniam dolor
+          dignissimos aliquam. Soluta?
+        </article>
+        <article>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+          architecto, velit quod unde provident iusto aliquam officiis sunt eius
+          itaque iste exercitationem quidem voluptatibus dignissimos ex
+          molestias? Dolorum, magnam sit?
+        </article>
+        <article>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos error
+          autem commodi repellat perferendis, inventore aliquid harum quibusdam.
+          Magni voluptas tempora commodi hic corporis, earum tenetur laudantium
+          veritatis aliquid ullam. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Labore inventore non illo eius, impedit libero
+          mollitia possimus ex tempore reprehenderit minus maxime sequi
+          quibusdam cupiditate pariatur at magni.
+        </article>
+      </section>
+      <aside>
+        <p>광고1</p>
+        <p>광고2</p>
+      </aside>
+    </div>
+    <footer>
+      <cite><p>사이트</p></cite>
+      <address><p>주소</p></address>
+    </footer>
+  </body>
+</html>
